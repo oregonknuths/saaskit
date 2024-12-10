@@ -17,7 +17,10 @@
     "build": "deno run -A --unstable-kv dev.ts build",
     "preview": "deno run -A --unstable-kv main.ts"
   },
-  "compilerOptions": { "jsx": "react-jsx", "jsxImportSource": "preact" },
+  "compilerOptions": {
+    "jsx": "react-jsx",
+    "jsxImportSource": "preact"
+  },
   "imports": {
     "@/": "./",
     "$fresh/": "https://raw.githubusercontent.com/denoland/fresh/60220dd33b5b0f6b5c72927c933dbc32a3c4734e/",
@@ -35,6 +38,25 @@
     "tabler_icons_tsx/": "https://deno.land/x/tabler_icons_tsx@0.0.4/tsx/",
     "fresh_charts/": "https://deno.land/x/fresh_charts@0.3.1/"
   },
-  "exclude": ["coverage/", "_fresh/", "**/_fresh/*"],
-  "lint": { "rules": { "tags": ["fresh", "recommended"] } }
+  "exclude": [
+    "coverage/",
+    "_fresh/",
+    "**/_fresh/*"
+  ],
+  "lint": {
+    "rules": {
+      "tags": [
+        "fresh",
+        "recommended"
+      ]
+    }
+  },
+  "deploy": {
+    "project": "29c7b51f-12ab-4121-a157-256a2250cf8a",
+    "exclude": [
+      "**/node_modules"
+    ],
+    "include": [],
+    "entrypoint": "main.ts"
+  }
 }
